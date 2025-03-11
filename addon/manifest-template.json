@@ -1,7 +1,7 @@
 {
   "name": "Salesforce inspector",
   "description": "Productivity tools for Salesforce administrators and developers to inspect data and metadata directly from the Salesforce UI.",
-  "version": "1.14",
+  "version": "1.15",
   "icons": {
     "128": "icon128.png"
   },
@@ -11,12 +11,14 @@
       "strict_min_version": "60.0"
     }
   },
-  "minimum_chrome_version": "61",
-  "permissions": [
+  "minimum_chrome_version": "88",
+  "host_permissions": [
     "https://*.salesforce.com/*",
     "https://*.force.com/*",
     "https://*.cloudforce.com/*",
-    "https://*.visualforce.com/*",
+    "https://*.visualforce.com/*"
+  ],
+  "permissions": [
     "cookies"
   ],
   "content_scripts": [
@@ -40,19 +42,29 @@
     }
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "web_accessible_resources": [
-    "popup.html",
-    "data-export.html",
-    "data-import.html",
-    "inspect.html",
-    "metadata-retrieve.html",
-    "explore-api.html",
-    "limits.html"
-  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "popup.html",
+      "data-export.html",
+      "data-import.html",
+      "inspect.html",
+      "metadata-retrieve.html",
+      "explore-api.html",
+      "limits.html"
+    ],
+    "matches": [
+      "https://*.salesforce.com/*",
+      "https://*.force.com/*",
+      "https://*.cloudforce.com/*",
+      "https://*.visualforce.com/*"
+    ]
+  }],
   "incognito": "replaced-at-build",
-  "manifest_version": 2
+  "manifest_version": 3,
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }
