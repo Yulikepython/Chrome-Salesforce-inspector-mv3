@@ -1,3 +1,14 @@
+Version 1.15
+===========
+
+General
+=======
+* Updated to Manifest V3 to comply with Chrome Web Store requirements
+* Modernized background script to use service worker
+* Updated permissions model to follow modern best practices
+* Added content security policy
+* Minimum Chrome version increased to 88
+
 Version 1.14
 ===========
 
