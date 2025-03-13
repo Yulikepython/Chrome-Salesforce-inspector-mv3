@@ -1,16 +1,15 @@
 <img src="https://raw.githubusercontent.com/sorenkrabbe/Chrome-Salesforce-inspector/master/addon/icon128.png" align="right">
 
-Salesforce inspector
-===========================
-Chrome and Firefox extension to add a metadata layout on top of the standard Salesforce UI to improve the productivity and joy of Salesforce configuration, development, and integration work.
+# Salesforce inspector (Manifest V3 Version)
 
-[![Test Status](https://travis-ci.org/sorenkrabbe/Chrome-Salesforce-inspector.svg?branch=master)](https://travis-ci.org/sorenkrabbe/Chrome-Salesforce-inspector)
+> This is a Manifest V3 update of [the original Salesforce Inspector](https://github.com/sorenkrabbe/Chrome-Salesforce-inspector) by Søren Krabbe and Jesper Kristensen.
+
+Chrome and Firefox extension to add a metadata layout on top of the standard Salesforce UI to improve the productivity and joy of Salesforce configuration, development, and integration work.
 
 Installation
 ------------
 
-| [:sunny: Add to Chrome](https://chrome.google.com/webstore/detail/salesforce-inspector/aodjmnfhjibkcdimpodiifdjnnncaafh) | [:sunny: Add to Firefox](https://addons.mozilla.org/firefox/addon/salesforce-inspector/) |
-| --- | --- |
+現在の拡張機能はChrome Web Storeから削除されています。以下のリポジトリからビルドしてインストールできます。この派生版がリリースされた場合、リンクをここに追加します。
 
 Features
 -----
@@ -102,10 +101,28 @@ Design Principles
 * Be conservative about the number and complexity of Salesforce API requests we make, but don't sacrifice the other principles to do so.
 * Focus on system administrators, developers and integrators.
 
-About
+Changes in This Version
+-----
+* Updated to Manifest V3 to comply with Chrome Web Store requirements
+* Modernized background script to use service worker
+* Updated permissions model to follow best practices
+* Added content security policy
+* Minimum Chrome version increased to 88
+
+For more details, see [CHANGES.md](CHANGES.md).
+
+About Original Authors
 -----
 By Søren Krabbe and Jesper Kristensen
 
 License
 -----
 MIT
+
+Support This Project
+-----
+If you find this tool useful in your work, consider supporting its ongoing development and maintenance:
+
+- [Buy me a coffee](https://buymeacoffee.com/yulikepython)
+
+For Salesforce consulting or custom development, please [contact me](mailto:your.email@example.com).
