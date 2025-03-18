@@ -131,4 +131,4 @@ If you find this tool useful in your work, consider supporting its ongoing devel
 
 - [Buy me a coffee](https://buymeacoffee.com/yulikepython)
 
-For Salesforce consulting or custom development, please [contact me](mailto:your.actual.email@example.com).
+For Salesforce consulting or custom development, please [contact me](mailto:info@itc.tokyo).
