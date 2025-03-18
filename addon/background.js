@@ -1,3 +1,4 @@
+//eslint-disable-next-line
 "use strict";
 
 // Service Worker for Manifest V3
@@ -13,7 +14,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     // http://salesforce.stackexchange.com/questions/23277/different-session-ids-in-different-contexts
     // There is no straight forward way to unambiguously understand if the user authenticated against salesforce.com or cloudforce.com
     // (and thereby the domain of the relevant cookie) cookie domains are therefore tried in sequence.
-    
+
     // In Manifest V3, Promise-based API is preferred
     const getCookie = async () => {
       try {
@@ -22,10 +23,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           sendResponse(null);
           return;
         }
-        
+
         let [orgId] = cookie.value.split("!");
         const salesforceCookies = await chrome.cookies.getAll({name: "sid", domain: "salesforce.com", secure: true, storeId: sender.tab.cookieStoreId});
-        
+
         let sessionCookie = salesforceCookies.find(c => c.value.startsWith(orgId + "!"));
         if (sessionCookie) {
           sendResponse(sessionCookie.domain);
@@ -43,11 +44,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         sendResponse(null);
       }
     };
-    
+
     getCookie();
     return true; // Tell Chrome that we want to call sendResponse asynchronously.
   }
-  
+
   if (request.message == "getSession") {
     const getSession = async () => {
       try {
@@ -63,10 +64,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         sendResponse(null);
       }
     };
-    
+
     getSession();
     return true; // Tell Chrome that we want to call sendResponse asynchronously.
   }
-  
+
   return false;
 });
