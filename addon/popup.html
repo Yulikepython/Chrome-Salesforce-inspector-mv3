@@ -7,8 +7,42 @@
     <script src="react.js"></script>
     <script src="react-dom.js"></script>
     <script type="module" src="popup.js"></script>
+    <style>
+      .footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+        font-size: 12px;
+        text-align: center;
+      }
+      .donate-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .donate-button {
+        background-color: #0070d2;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .github-link {
+        color: #0070d2;
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <footer class="footer">
+      <div class="donate-section">
+        <p>Find this tool useful? Consider supporting its development:</p>
+        <a href="https://www.buymeacoffee.com/yourname" target="_blank" class="donate-button">Buy me a coffee</a>
+        <a href="https://github.com/yourname/salesforce-inspector-mv3" target="_blank" class="github-link">View on GitHub</a>
+      </div>
+    </footer>
   </body>
 </html>
