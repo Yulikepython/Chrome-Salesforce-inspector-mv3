@@ -11,5 +11,6 @@ yarn.lock
 addon/manifest.json
 
 addon.crx
-
 addon.pem
+
+*.txt

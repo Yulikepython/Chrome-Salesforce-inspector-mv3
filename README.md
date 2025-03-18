@@ -36,6 +36,12 @@ All Salesforce API calls from the Inspector re-uses the access token/session use
 
 To validate the accuracy of this description, inspect the source code, monitor the network traffic in your browser or take my word.
 
+Disclaimer
+-----
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE AUTHOR(S) AND MAINTAINER(S) OF THIS SOFTWARE SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE. USE AT YOUR OWN RISK.
+
+This is a community-maintained fork of the original Salesforce Inspector with modifications to support modern browser requirements. It is not officially associated with Salesforce.
+
 Troubleshooting
 -----
 * If Salesforce Inspector is not available after installation, the most likely issue is that your browser is not up to date. See [instructions for Google Chrome](https://productforums.google.com/forum/#!topic/chrome/YK1-o4KoSjc).
@@ -125,4 +131,4 @@ If you find this tool useful in your work, consider supporting its ongoing devel
 
 - [Buy me a coffee](https://buymeacoffee.com/yulikepython)
 
-For Salesforce consulting or custom development, please [contact me](mailto:your.email@example.com).
+For Salesforce consulting or custom development, please [contact me](mailto:your.actual.email@example.com).
